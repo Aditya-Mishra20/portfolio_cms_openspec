@@ -1,3 +1,4 @@
+import type { PortableTextBlock } from "@portabletext/types";
 import { groq } from "next-sanity";
 
 import { sanityFetch } from "../client";
@@ -28,7 +29,7 @@ export type BlogPostSummary = {
 };
 
 export type BlogPost = BlogPostSummary & {
-  body?: { _type: string; children?: { text?: string }[] }[];
+  body?: PortableTextBlock[];
 };
 
 export async function getBlogPosts(): Promise<BlogPostSummary[]> {

@@ -1,9 +1,5 @@
 import { NextResponse } from "next/server";
 
-const apiKey = process.env.EMAIL_SERVICE_API_KEY ?? "";
-const fromEmail = process.env.CONTACT_FROM_EMAIL ?? "onboarding@resend.dev";
-const toEmail = process.env.CONTACT_TO_EMAIL ?? "";
-
 type ContactPayload = {
   name: string;
   email: string;
@@ -14,21 +10,25 @@ function isValid(payload: unknown): payload is ContactPayload {
   if (!payload || typeof payload !== "object") return false;
   const { name, email, message } = payload as Record<string, unknown>;
   if (typeof name !== "string" || !name.trim()) return false;
-  if (
-    typeof email !== "string" ||
-    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-  )
+  if (typeof email !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
     return false;
   if (typeof message !== "string" || !message.trim()) return false;
   return true;
 }
 
 export async function POST(request: Request) {
+  const apiKey = process.env.EMAIL_SERVICE_API_KEY ?? "";
+  const fromEmail = process.env.CONTACT_FROM_EMAIL ?? "onboarding@resend.dev";
+  const toEmail = process.env.CONTACT_TO_EMAIL ?? "";
+
   let payload: unknown;
   try {
     payload = await request.json();
   } catch {
-    return NextResponse.json({ error: "Invalid request body" }, { status: 400 });
+    return NextResponse.json(
+      { error: "Invalid request body" },
+      { status: 400 }
+    );
   }
 
   if (!isValid(payload)) {

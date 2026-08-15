@@ -30,7 +30,8 @@ export function ContactForm() {
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     const nextErrors = validate(formData);
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) return;
@@ -48,7 +49,7 @@ export function ContactForm() {
 
     if (response.ok) {
       setState("success");
-      event.currentTarget.reset();
+      form.reset();
     } else {
       setState("error");
     }
@@ -60,7 +61,7 @@ export function ContactForm() {
         <Label htmlFor="name">Name</Label>
         <Input id="name" name="name" placeholder="Your name" />
         {errors.name ? (
-          <p className="text-sm text-destructive">{errors.name}</p>
+          <p className="text-destructive text-sm">{errors.name}</p>
         ) : null}
       </div>
       <div className="space-y-2">
@@ -72,14 +73,19 @@ export function ContactForm() {
           placeholder="you@example.com"
         />
         {errors.email ? (
-          <p className="text-sm text-destructive">{errors.email}</p>
+          <p className="text-destructive text-sm">{errors.email}</p>
         ) : null}
       </div>
       <div className="space-y-2">
         <Label htmlFor="message">Message</Label>
-        <Textarea id="message" name="message" placeholder="Your message" rows={5} />
+        <Textarea
+          id="message"
+          name="message"
+          placeholder="Your message"
+          rows={5}
+        />
         {errors.message ? (
-          <p className="text-sm text-destructive">{errors.message}</p>
+          <p className="text-destructive text-sm">{errors.message}</p>
         ) : null}
       </div>
       <Button type="submit" disabled={state === "submitting"}>
@@ -91,7 +97,7 @@ export function ContactForm() {
         </p>
       ) : null}
       {state === "error" ? (
-        <p className="text-sm text-destructive">
+        <p className="text-destructive text-sm">
           Something went wrong. Please try again.
         </p>
       ) : null}

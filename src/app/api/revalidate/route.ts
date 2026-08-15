@@ -1,9 +1,8 @@
 import { revalidateTag } from "next/cache";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
 import { parseBody } from "next-sanity/webhook";
-
-const secret = process.env.REVALIDATE_SECRET ?? "";
 
 const tagByType: Record<string, string> = {
   project: "project",
@@ -15,6 +14,7 @@ const tagByType: Record<string, string> = {
 };
 
 export async function POST(req: NextRequest) {
+  const secret = process.env.REVALIDATE_SECRET ?? "";
   let parsed;
   try {
     parsed = await parseBody(req, secret);

@@ -1,0 +1,16 @@
+node_modules
+.next
+out
+build
+.agents
+.opencode
+openspec
+adr
+.github
+*.md
+AGENTS.md
+LICENSE.md
+opencode.json
+skills-lock.json
+tsconfig.tsbuildinfo
+scripts/seed.json

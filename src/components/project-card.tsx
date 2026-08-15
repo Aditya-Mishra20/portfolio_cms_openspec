@@ -34,7 +34,7 @@ export function ProjectCard({ project }: { project: Project }) {
       </CardHeader>
       <CardContent className="space-y-4">
         {project.description ? (
-          <p className="text-sm text-muted-foreground">{project.description}</p>
+          <p className="text-muted-foreground text-sm">{project.description}</p>
         ) : null}
         {project.techStack?.length ? (
           <div className="flex flex-wrap gap-2">
@@ -71,7 +71,12 @@ export function ProjectCard({ project }: { project: Project }) {
         </CardFooter>
       ) : null}
       <CardFooter>
-        <Button render={<Link href={`/work#${project.slug.current}`} />} size="sm" variant="ghost" nativeButton={false}>
+        <Button
+          render={<Link href={`/work#${project.slug.current}`} />}
+          size="sm"
+          variant="ghost"
+          nativeButton={false}
+        >
           View details
         </Button>
       </CardFooter>

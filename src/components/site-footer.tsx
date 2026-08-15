@@ -2,15 +2,11 @@ import Link from "next/link";
 
 import type { SiteSettings } from "@/sanity/lib/queries/siteSettings";
 
-export function SiteFooter({
-  settings,
-}: {
-  settings: SiteSettings | null;
-}) {
+export function SiteFooter({ settings }: { settings: SiteSettings | null }) {
   return (
     <footer className="border-t">
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-4 py-8 text-center">
-        <p className="text-sm text-muted-foreground">
+        <p className="text-muted-foreground text-sm">
           {settings?.footerContent ?? "Built with Next.js and Sanity."}
         </p>
         {settings?.socialLinks?.length ? (
@@ -21,7 +17,7 @@ export function SiteFooter({
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="text-muted-foreground hover:text-foreground text-sm transition-colors"
               >
                 {link.label}
               </Link>

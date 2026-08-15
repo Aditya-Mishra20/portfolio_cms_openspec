@@ -3,7 +3,7 @@
     "_id": "siteSettings",
     "_type": "siteSettings",
     "siteTitle": "Aditya Mishra — Portfolio",
-    "siteDescription": "A developer portfolio powered by Sanity CMS.",
+    "siteDescription": "AI Engineer & Full Stack Developer — building intelligent systems from RAG pipelines to production-ready AI applications.",
     "navLinks": [
       { "_key": "nav-work", "label": "Work", "href": "/work" },
       { "_key": "nav-services", "label": "Services", "href": "/services" },
@@ -12,19 +12,20 @@
       { "_key": "nav-contact", "label": "Contact", "href": "/contact" }
     ],
     "footerContent": "Built with Next.js and Sanity CMS.",
-    "heroHeading": "Hello, I build for the web.",
-    "heroIntroduction": "I am a developer focused on creating fast, accessible, and maintainable web experiences.",
+    "heroHeading": "Building intelligent systems, end to end.",
+    "heroIntroduction": "AI Engineer & Full Stack Developer — from RAG pipelines to production-ready AI applications.",
     "socialLinks": [
       { "_key": "soc-github", "label": "GitHub", "url": "https://github.com/Aditya-Mishra20" },
-      { "_key": "soc-linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com" }
+      { "_key": "soc-linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com/in/aditya-mishra-b16902262/" },
+      { "_key": "soc-twitter", "label": "Twitter", "url": "https://x.com/Aditya2023Adi" }
     ]
   },
   {
     "_id": "contactInfo",
     "_type": "contactInfo",
-    "email": "am2189025+sanity@gmail.com",
-    "phone": "",
-    "location": "India",
+    "email": "adityamishra21am@gmail.com",
+    "phone": "+91 7878591002",
+    "location": "Jaipur, Rajasthan, India",
     "availability": "available"
   },
   {
@@ -39,117 +40,112 @@
           {
             "_type": "span",
             "_key": "bio-1-span",
-            "text": "I build for the web. This section comes from the CMS and is rendered on the About page."
+            "text": "I'm an AI Engineer and Full Stack Developer focused on building practical, production-oriented AI systems — retrieval-augmented generation pipelines, AI agents, and intelligent automation. My experience spans backend architecture, role-based access systems, and modern AI/LLM tooling. I care about shipping things that actually work end-to-end, not just demos."
           }
         ]
       }
     ],
-    "skills": ["TypeScript", "Next.js", "React", "Node.js", "Tailwind CSS", "Sanity"],
+    "skills": [
+      "C++",
+      "Python",
+      "JavaScript",
+      "SQL",
+      "Next.js",
+      "FastAPI",
+      "Django",
+      "React.js",
+      "Express.js",
+      "Node.js",
+      "LangChain",
+      "Langfuse",
+      "MongoDB",
+      "PostgreSQL",
+      "ChromaDB",
+      "Docker",
+      "Git",
+      "Postman",
+      "Celery",
+      "RabbitMQ",
+      "Codex",
+      "OpenCode",
+      "Claude",
+      "Hugging Face",
+      "Retrieval-Augmented Generation (RAG)",
+      "LLM Evaluation",
+      "Prompt Engineering",
+      "Vector Databases",
+      "Sentence Transformers"
+    ],
     "experience": [
       {
         "_key": "exp-1",
         "_type": "experienceEntry",
-        "role": "Software Developer",
-        "company": "Your Company",
-        "period": "2024 — Present",
-        "summary": "Building and shipping web applications."
+        "role": "AI Developer Intern",
+        "company": "Datansh Solutions",
+        "period": "Mar 2026 – June 2026",
+        "summary": "Implemented fine-grained RBAC and access control across HRMS modules (Admin, HR, Manager, Employee). Developed permission-based APIs and workspace-scoped authorization mechanisms. Built Asset Management workflows — inventory, assignments, requests, approvals, returns. Implemented bulk asset assignment and lifecycle management with transactional database operations. Contributed to a multi-tenant ERP platform using Django, PostgreSQL, Next.js, Docker, Celery, RabbitMQ."
+      },
+      {
+        "_key": "exp-2",
+        "_type": "experienceEntry",
+        "role": "Summer Industrial Trainee",
+        "company": "Learn and Build, Jaipur",
+        "period": "Jul 2023 – Sep 2023",
+        "summary": "Developed an E-Commerce application with secure authentication and REST APIs. Implemented JWT-based authorization and improved frontend UX. Worked with React.js, Express.js, MongoDB, Postman."
       }
     ],
     "socialLinks": [
       { "_key": "soc-github", "label": "GitHub", "url": "https://github.com/Aditya-Mishra20" },
-      { "_key": "soc-linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com" }
+      { "_key": "soc-linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com/in/aditya-mishra-b16902262/" },
+      { "_key": "soc-twitter", "label": "Twitter", "url": "https://x.com/Aditya2023Adi" }
     ]
   },
   {
     "_id": "service-1",
     "_type": "service",
-    "name": "Web Development",
-    "description": "End-to-end web application development with modern frameworks.",
-    "icon": "Code2",
+    "name": "High-Converting Landing Pages",
+    "description": "Animated, modern landing pages built to convert visitors into customers — fast load times, clean UX, and visual polish.",
+    "icon": "Layout",
     "order": 1
   },
   {
     "_id": "service-2",
     "_type": "service",
-    "name": "CMS Integration",
-    "description": "Content management with headless CMS platforms such as Sanity.",
-    "icon": "Database",
+    "name": "AI Voice Assistants",
+    "description": "Custom voice-based AI assistants for automation, customer support, or product-specific use cases.",
+    "icon": "Mic",
     "order": 2
   },
   {
     "_id": "service-3",
     "_type": "service",
-    "name": "Performance & SEO",
-    "description": "Core Web Vitals optimization and search-engine-friendly architecture.",
-    "icon": "Gauge",
+    "name": "RAG-Based Chatbots",
+    "description": "Chatbots grounded in your own documents/data using Retrieval-Augmented Generation — accurate, source-backed answers instead of generic AI responses.",
+    "icon": "MessageSquare",
     "order": 3
   },
   {
     "_id": "project-1",
     "_type": "project",
-    "title": "Portfolio CMS",
-    "slug": { "_type": "slug", "current": "portfolio-cms" },
-    "description": "This very site: a developer portfolio with an embedded Sanity Studio and ISR.",
-    "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "Sanity"],
+    "title": "Classical RAG Pipeline",
+    "slug": { "_type": "slug", "current": "classical-rag-pipeline" },
+    "description": "A modular RAG ingestion pipeline supporting PDFs, plain text, and database records, with semantic chunking, metadata preservation, and provenance tracking for improved retrieval accuracy.",
+    "techStack": ["LangChain", "ChromaDB", "Sentence Transformers", "Langfuse"],
     "featured": true,
-    "date": "2026-01-15",
-    "liveUrl": "",
-    "repoUrl": "https://github.com/Aditya-Mishra20/portfolio_cms_openspec"
-  },
-  {
-    "_id": "project-2",
-    "_type": "project",
-    "title": "Sample Project",
-    "slug": { "_type": "slug", "current": "sample-project" },
-    "description": "A placeholder project demonstrating the project card layout.",
-    "techStack": ["React", "Node.js"],
-    "featured": false,
-    "date": "2025-10-01",
+    "date": "2026-06-01",
     "liveUrl": "",
     "repoUrl": ""
   },
   {
-    "_id": "post-1",
-    "_type": "blogPost",
-    "title": "Welcome to my blog",
-    "slug": { "_type": "slug", "current": "welcome-to-my-blog" },
-    "excerpt": "A short introduction to this blog, powered by Sanity CMS.",
-    "publishedAt": "2026-02-01T10:00:00Z",
-    "body": [
-      {
-        "_type": "block",
-        "_key": "post-1-b1",
-        "style": "normal",
-        "children": [
-          {
-            "_type": "span",
-            "_key": "post-1-b1-span",
-            "text": "Hello and welcome! This is the first post, written and published from the embedded Sanity Studio."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "_id": "post-2",
-    "_type": "blogPost",
-    "title": "Rendering content with ISR",
-    "slug": { "_type": "slug", "current": "rendering-content-with-isr" },
-    "excerpt": "How this site revalidates CMS content without redeploying.",
-    "publishedAt": "2026-02-10T10:00:00Z",
-    "body": [
-      {
-        "_type": "block",
-        "_key": "post-2-b1",
-        "style": "normal",
-        "children": [
-          {
-            "_type": "span",
-            "_key": "post-2-b1-span",
-            "text": "Static pages are regenerated every five minutes, and a webhook can trigger immediate revalidation on publish."
-          }
-        ]
-      }
-    ]
+    "_id": "project-2",
+    "_type": "project",
+    "title": "DocSlot — Doctor Appointment System",
+    "slug": { "_type": "slug", "current": "docslot-doctor-appointment-system" },
+    "description": "A full-stack appointment management platform with role-based access for User, Doctor, and Admin roles.",
+    "techStack": ["Node.js", "React.js", "JWT", "MongoDB"],
+    "featured": false,
+    "date": "2026-01-01",
+    "liveUrl": "",
+    "repoUrl": ""
   }
 ]

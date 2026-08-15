@@ -16,7 +16,7 @@ const singletonTypes = new Set(["siteSettings", "contactInfo"]);
 const singletonListItem = (
   S: StructureBuilder,
   type: string,
-  title: string,
+  title: string
 ): ListItemBuilder =>
   S.documentListItem().id(type).title(title).schemaType(type);
 

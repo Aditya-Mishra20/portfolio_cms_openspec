@@ -1,3 +1,4 @@
+import type { PortableTextBlock } from "@portabletext/types";
 import { groq } from "next-sanity";
 
 import { sanityFetch } from "../client";
@@ -36,7 +37,7 @@ export type ExperienceEntry = {
 };
 
 export type About = {
-  bio?: { _type: string; children?: { text?: string }[] }[];
+  bio?: PortableTextBlock[];
   skills?: string[];
   experience?: ExperienceEntry[];
   socialLinks?: { label: string; url: string }[];

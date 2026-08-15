@@ -10,6 +10,7 @@ out/
 .nuxt/
 .svelte-kit/
 coverage/
+tsconfig.tsbuildinfo
 
 # Runtime and package-manager caches
 .cache/

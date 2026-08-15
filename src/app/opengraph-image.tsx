@@ -11,26 +11,24 @@ export default async function OpenGraphImage() {
   const title = settings?.siteTitle ?? "Portfolio";
 
   return new ImageResponse(
-    (
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#0a0a0a",
-          color: "#fafafa",
-          fontFamily: "sans-serif",
-        }}
-      >
-        <div style={{ fontSize: 64, fontWeight: 700 }}>{title}</div>
-        <div style={{ fontSize: 32, marginTop: 16, color: "#a1a1aa" }}>
-          Developer portfolio
-        </div>
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#0a0a0a",
+        color: "#fafafa",
+        fontFamily: "sans-serif",
+      }}
+    >
+      <div style={{ fontSize: 64, fontWeight: 700 }}>{title}</div>
+      <div style={{ fontSize: 32, marginTop: 16, color: "#a1a1aa" }}>
+        Developer portfolio
       </div>
-    ),
-    { ...size },
+    </div>,
+    { ...size }
   );
 }
