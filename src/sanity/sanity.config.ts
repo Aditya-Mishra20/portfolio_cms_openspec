@@ -1,3 +1,5 @@
+"use client";
+
 import { defineConfig } from "sanity";
 import {
   structureTool,
@@ -21,6 +23,7 @@ const singletonListItem = (
 export default defineConfig({
   name: "portfolio-cms",
   title: "Portfolio CMS",
+  basePath: "/studio",
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? "",
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET ?? "",
   plugins: [structureTool(), visionTool()],

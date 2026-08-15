@@ -1,0 +1,155 @@
+[
+  {
+    "_id": "siteSettings",
+    "_type": "siteSettings",
+    "siteTitle": "Aditya Mishra — Portfolio",
+    "siteDescription": "A developer portfolio powered by Sanity CMS.",
+    "navLinks": [
+      { "_key": "nav-work", "label": "Work", "href": "/work" },
+      { "_key": "nav-services", "label": "Services", "href": "/services" },
+      { "_key": "nav-about", "label": "About", "href": "/about" },
+      { "_key": "nav-blog", "label": "Blog", "href": "/blog" },
+      { "_key": "nav-contact", "label": "Contact", "href": "/contact" }
+    ],
+    "footerContent": "Built with Next.js and Sanity CMS.",
+    "heroHeading": "Hello, I build for the web.",
+    "heroIntroduction": "I am a developer focused on creating fast, accessible, and maintainable web experiences.",
+    "socialLinks": [
+      { "_key": "soc-github", "label": "GitHub", "url": "https://github.com/Aditya-Mishra20" },
+      { "_key": "soc-linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com" }
+    ]
+  },
+  {
+    "_id": "contactInfo",
+    "_type": "contactInfo",
+    "email": "am2189025+sanity@gmail.com",
+    "phone": "",
+    "location": "India",
+    "availability": "available"
+  },
+  {
+    "_id": "about-page",
+    "_type": "about",
+    "bio": [
+      {
+        "_type": "block",
+        "_key": "bio-1",
+        "style": "normal",
+        "children": [
+          {
+            "_type": "span",
+            "_key": "bio-1-span",
+            "text": "I build for the web. This section comes from the CMS and is rendered on the About page."
+          }
+        ]
+      }
+    ],
+    "skills": ["TypeScript", "Next.js", "React", "Node.js", "Tailwind CSS", "Sanity"],
+    "experience": [
+      {
+        "_key": "exp-1",
+        "_type": "experienceEntry",
+        "role": "Software Developer",
+        "company": "Your Company",
+        "period": "2024 — Present",
+        "summary": "Building and shipping web applications."
+      }
+    ],
+    "socialLinks": [
+      { "_key": "soc-github", "label": "GitHub", "url": "https://github.com/Aditya-Mishra20" },
+      { "_key": "soc-linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com" }
+    ]
+  },
+  {
+    "_id": "service-1",
+    "_type": "service",
+    "name": "Web Development",
+    "description": "End-to-end web application development with modern frameworks.",
+    "icon": "Code2",
+    "order": 1
+  },
+  {
+    "_id": "service-2",
+    "_type": "service",
+    "name": "CMS Integration",
+    "description": "Content management with headless CMS platforms such as Sanity.",
+    "icon": "Database",
+    "order": 2
+  },
+  {
+    "_id": "service-3",
+    "_type": "service",
+    "name": "Performance & SEO",
+    "description": "Core Web Vitals optimization and search-engine-friendly architecture.",
+    "icon": "Gauge",
+    "order": 3
+  },
+  {
+    "_id": "project-1",
+    "_type": "project",
+    "title": "Portfolio CMS",
+    "slug": { "_type": "slug", "current": "portfolio-cms" },
+    "description": "This very site: a developer portfolio with an embedded Sanity Studio and ISR.",
+    "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "Sanity"],
+    "featured": true,
+    "date": "2026-01-15",
+    "liveUrl": "",
+    "repoUrl": "https://github.com/Aditya-Mishra20/portfolio_cms_openspec"
+  },
+  {
+    "_id": "project-2",
+    "_type": "project",
+    "title": "Sample Project",
+    "slug": { "_type": "slug", "current": "sample-project" },
+    "description": "A placeholder project demonstrating the project card layout.",
+    "techStack": ["React", "Node.js"],
+    "featured": false,
+    "date": "2025-10-01",
+    "liveUrl": "",
+    "repoUrl": ""
+  },
+  {
+    "_id": "post-1",
+    "_type": "blogPost",
+    "title": "Welcome to my blog",
+    "slug": { "_type": "slug", "current": "welcome-to-my-blog" },
+    "excerpt": "A short introduction to this blog, powered by Sanity CMS.",
+    "publishedAt": "2026-02-01T10:00:00Z",
+    "body": [
+      {
+        "_type": "block",
+        "_key": "post-1-b1",
+        "style": "normal",
+        "children": [
+          {
+            "_type": "span",
+            "_key": "post-1-b1-span",
+            "text": "Hello and welcome! This is the first post, written and published from the embedded Sanity Studio."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "post-2",
+    "_type": "blogPost",
+    "title": "Rendering content with ISR",
+    "slug": { "_type": "slug", "current": "rendering-content-with-isr" },
+    "excerpt": "How this site revalidates CMS content without redeploying.",
+    "publishedAt": "2026-02-10T10:00:00Z",
+    "body": [
+      {
+        "_type": "block",
+        "_key": "post-2-b1",
+        "style": "normal",
+        "children": [
+          {
+            "_type": "span",
+            "_key": "post-2-b1-span",
+            "text": "Static pages are regenerated every five minutes, and a webhook can trigger immediate revalidation on publish."
+          }
+        ]
+      }
+    ]
+  }
+]

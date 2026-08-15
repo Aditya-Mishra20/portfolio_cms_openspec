@@ -10,7 +10,7 @@
 
 ## 2. Sanity Project and Studio
 
-- [ ] 2.1 Create the Sanity project and dataset via the Sanity CLI and record project ID and dataset name.
+- [x] 2.1 Create the Sanity project and dataset via the Sanity CLI and record project ID and dataset name.
 - [x] 2.2 Define the `project` document type schema (title, description, tech stack, images, links, featured flag, date).
 - [x] 2.3 Define the `service` document type schema (name, description, icon, order).
 - [x] 2.4 Define the `about` document type schema (bio, skills, experience entries, social links).
