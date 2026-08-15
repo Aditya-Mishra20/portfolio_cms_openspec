@@ -9,7 +9,7 @@ Current state: no application code exists. The change establishes the full stack
 Stakeholders: the site owner (content editor and developer), site visitors, search engines, and the email delivery service.
 
 Constraints:
-- Next.js 15 (App Router), TypeScript, Tailwind CSS v4, shadcn/ui.
+- Next.js 16 (App Router), TypeScript, Tailwind CSS v4, shadcn/ui.
 - Sanity as the content source with an embedded Studio at `/studio`.
 - ISR-based publishing; no live preview in this change.
 - Light + dark theme, English only, no analytics.
@@ -43,14 +43,14 @@ flowchart LR
 
 ## Decisions
 
-### D1: Next.js 15 App Router with TypeScript
+### D1: Next.js 16 App Router with TypeScript
 Rationale: Server Components and the metadata API map directly to the SEO and ISR requirements; TypeScript gives typed content models. Alternative considered: pages router (no RSC benefits, metadata API is more manual) — rejected.
 
 ### D2: Embedded Sanity Studio at `/studio`
 The Studio runs inside the same Next.js app via the `sanity` package (with `@sanity/next` helpers), mounted as a route. Rationale: one repo, one deployment, one environment for the owner. Alternatives: separate Studio app (more ops, no benefit at this scale) and hosted manage-only (weaker integration) — rejected.
 
 ### D3: Data fetching via GROQ with ISR
-All reads use `@sanity/client` with GROQ against the Content Lake, with `next: { revalidate }` on page fetches and `revalidatePath` triggered by a Sanity webhook on publish. Rationale: static generation with fast refresh without redeploys. Alternatives: client-side fetch (loses static caching) and full on-demand revalidation per request (over-engineering) — rejected.
+All reads use `@sanity/client` with GROQ against the Content Lake, with `next: { revalidate }` and cache tags on page fetches, plus tag-based revalidation (`revalidateTag`) triggered by a Sanity webhook on publish. Rationale: static generation with fast refresh without redeploys. Alternatives: client-side fetch (loses static caching) and full on-demand revalidation per request (over-engineering) — rejected.
 
 ### D4: Content model as six document types
 `project`, `service`, `about`, `site-settings` (singleton), `contact-info` (singleton), `blog-post`. All live in one dataset with Sanity's built-in draft/publish. Rationale: maps 1:1 to proposal capabilities; singletons prevent duplicate settings. Alternative: fewer types with generic "content blocks" — rejected for discoverability and schema validation.

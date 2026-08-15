@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import {
   Card,
   CardContent,
@@ -7,6 +9,11 @@ import {
 import { getServices } from "@/sanity/lib/queries/content";
 
 export const revalidate = 300;
+
+export const metadata: Metadata = {
+  title: "Services",
+  description: "How I can help with your next project.",
+};
 
 export default async function ServicesPage() {
   const services = await getServices();

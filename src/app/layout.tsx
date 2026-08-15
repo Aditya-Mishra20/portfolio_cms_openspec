@@ -20,12 +20,19 @@ const geistMono = Geist_Mono({
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSiteSettings();
+  const title = settings?.siteTitle ?? "Portfolio";
   return {
     title: {
-      default: settings?.siteTitle ?? "Portfolio",
-      template: `%s | ${settings?.siteTitle ?? "Portfolio"}`,
+      default: title,
+      template: `%s | ${title}`,
     },
     description: settings?.siteDescription,
+    openGraph: {
+      title,
+      description: settings?.siteDescription,
+      siteName: title,
+      type: "website",
+    },
   };
 }
 

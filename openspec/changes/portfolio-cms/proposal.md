@@ -31,7 +31,7 @@ A developer portfolio is the primary marketing asset for freelance and job-seeki
 
 ## Impact
 
-- New Next.js 15 application (TypeScript, App Router) in this repository — new app code, `package.json` dependencies (Tailwind CSS v4, shadcn/ui, Sanity packages: `sanity`, `@sanity/client`, `@sanity/next`, `groq`).
+- New Next.js 16 application (TypeScript, App Router) in this repository — new app code, `package.json` dependencies (Tailwind CSS v4, shadcn/ui, Sanity packages: `sanity`, `@sanity/client`, `next-sanity`, `groq`).
 - New Sanity project required (created via Sanity CLI); consumes `SANITY_PROJECT_ID`, `SANITY_DATASET`, and API token environment variables.
 - Contact form requires an email service account and its API key as an environment variable.
 - Deployment target: Vercel; ISR revalidation is configured via Sanity webhook or `revalidatePath` triggers.

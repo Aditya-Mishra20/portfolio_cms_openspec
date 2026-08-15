@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import { Mail, MapPin, Phone } from "lucide-react";
 
 import { ContactForm } from "@/components/contact-form";
@@ -10,6 +12,11 @@ import {
 import { getContactInfo } from "@/sanity/lib/queries/content";
 
 export const revalidate = 300;
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Get in touch — contact details and a message form.",
+};
 
 export default async function ContactPage() {
   const contact = await getContactInfo();

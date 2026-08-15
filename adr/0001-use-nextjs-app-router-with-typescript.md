@@ -13,13 +13,13 @@ Accepted
 The portfolio site needs server-rendered, content-driven pages with built-in SEO metadata and static generation. The project must be maintainable by a solo developer and stay current with the ecosystem.
 
 Considered options:
-- Next.js 15 App Router with TypeScript: Server Components, metadata API, ISR support built in.
+- Next.js 16 App Router with TypeScript: Server Components, metadata API, ISR support built in.
 - Pages router: mature but no RSC benefits and more manual metadata.
 - Vite + React SPA: client-only rendering, weak SEO without extra tooling.
 
 ## Decision
 
-Use Next.js 15 (App Router) with TypeScript as the application framework, because Server Components and the metadata API map directly to the SEO and ISR requirements, and TypeScript gives typed content models for the Sanity integration.
+Use Next.js 16 (App Router) with TypeScript as the application framework, because Server Components and the metadata API map directly to the SEO and ISR requirements, and TypeScript gives typed content models for the Sanity integration.
 
 ## Consequences
 

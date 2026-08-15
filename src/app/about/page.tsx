@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -8,6 +10,11 @@ import {
 import { getAbout } from "@/sanity/lib/queries/content";
 
 export const revalidate = 300;
+
+export const metadata: Metadata = {
+  title: "About",
+  description: "About me — my biography, skills, and experience.",
+};
 
 function PortableText({
   blocks,

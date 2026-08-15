@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
+
 import { ProjectCard } from "@/components/project-card";
 import { getProjects } from "@/sanity/lib/queries/projects";
 
 export const revalidate = 300;
+
+export const metadata: Metadata = {
+  title: "Work",
+  description: "A selection of projects I have built.",
+};
 
 export default async function WorkPage() {
   const projects = await getProjects();
