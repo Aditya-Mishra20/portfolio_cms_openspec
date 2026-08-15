@@ -1,6 +1,7 @@
 ## ADDED Requirements
 
-### Requirement: Per-page metadata for search engines
+### Requirement: Page metadata
+Per-page metadata MUST be provided for search engines
 Feature: seo
 
 #### Scenario: Search engine fetches a page
@@ -9,7 +10,8 @@ Feature: seo
 - **THEN** the page exposes a unique title and description
 - **AND** the metadata reflects CMS content where available
 
-### Requirement: Sitemap lists all public pages
+### Requirement: Sitemap
+The sitemap MUST list all public pages
 Feature: seo
 
 #### Scenario: Search engine fetches the sitemap
@@ -17,7 +19,8 @@ Feature: seo
 - **WHEN** a search engine fetches the sitemap
 - **THEN** the sitemap lists the public pages and published blog post URLs
 
-### Requirement: Robots file allows crawling of public pages
+### Requirement: Robots file
+The robots file MUST allow crawling of public pages
 Feature: seo
 
 #### Scenario: Search engine fetches the robots file
@@ -26,7 +29,8 @@ Feature: seo
 - **AND** it points to the sitemap
 - **AND** it disallows the embedded Studio route
 
-### Requirement: OpenGraph metadata for social sharing
+### Requirement: OpenGraph metadata
+OpenGraph metadata MUST be provided for social sharing
 Feature: seo
 
 #### Scenario: Social platform fetches a page link

@@ -1,6 +1,7 @@
 ## ADDED Requirements
 
-### Requirement: Content types available in the Studio
+### Requirement: Studio content types
+Content types MUST be available in the Studio
 Feature: cms-content
 Rule: The Studio exposes project, service, about, site-settings, contact-info, and blog-post content types
 
@@ -20,7 +21,8 @@ Rule: The Studio exposes project, service, about, site-settings, contact-info, a
 - **WHEN** the editor creates a blog post document
 - **THEN** the document has fields for title, body, cover image, and publication status
 
-### Requirement: Studio embedded in the site at /studio
+### Requirement: Embedded Studio
+The Studio MUST be embedded in the site at /studio
 Feature: cms-content
 
 #### Scenario: Editor opens the embedded Studio
@@ -29,7 +31,8 @@ Feature: cms-content
 - **THEN** the Sanity Studio loads in the browser
 - **AND** the editor can browse and edit all content types
 
-### Requirement: Studio access requires authentication
+### Requirement: Studio authentication
+Studio access MUST require authentication
 Feature: cms-content
 
 #### Scenario: Unauthenticated visitor opens the Studio
@@ -38,7 +41,8 @@ Feature: cms-content
 - **THEN** access is denied
 - **AND** the visitor is not shown any content management features
 
-### Requirement: Published content is served to the site
+### Requirement: Published content delivery
+Published content MUST be served to the site
 Feature: cms-content
 
 #### Scenario: Site fetches published documents

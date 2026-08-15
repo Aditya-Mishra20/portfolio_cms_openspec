@@ -1,6 +1,7 @@
 ## ADDED Requirements
 
-### Requirement: Blog index lists published posts
+### Requirement: Blog index
+The blog index MUST list published posts
 Feature: blog
 
 #### Scenario: Visitor opens the blog index
@@ -14,7 +15,8 @@ Feature: blog
 - **WHEN** a visitor opens the blog index page
 - **THEN** the page indicates that no posts are available
 
-### Requirement: Blog post detail page renders the full post
+### Requirement: Blog post detail page
+The blog post detail page MUST render the full post
 Feature: blog
 
 #### Scenario: Visitor opens a published post
@@ -22,7 +24,8 @@ Feature: blog
 - **WHEN** a visitor opens that post's detail page
 - **THEN** the post title, body, and cover image are displayed
 
-### Requirement: Draft posts are not shown publicly
+### Requirement: Draft visibility
+Draft posts MUST NOT be shown publicly
 Feature: blog
 
 #### Scenario: Visitor requests a draft post URL
@@ -31,7 +34,8 @@ Feature: blog
 - **THEN** the draft content is not displayed
 - **AND** the visitor is shown a not-found response
 
-### Requirement: Published edits appear without a redeployment
+### Requirement: Published edits
+Published edits MUST appear without a redeployment
 Feature: blog
 
 #### Scenario: Editor updates a published post

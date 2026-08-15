@@ -1,6 +1,7 @@
 ## ADDED Requirements
 
-### Requirement: Contact form validates input
+### Requirement: Form validation
+The contact form MUST validate input
 Feature: contact-form
 
 #### Scenario: Visitor submits a valid message
@@ -14,7 +15,8 @@ Feature: contact-form
 - **THEN** the form shows a validation error for the email address
 - **AND** the message is not sent
 
-### Requirement: Submissions are delivered by email
+### Requirement: Email delivery
+Submissions MUST be delivered by email
 Feature: contact-form
 
 #### Scenario: Valid submission is delivered
@@ -22,7 +24,8 @@ Feature: contact-form
 - **WHEN** the visitor submits a valid message
 - **THEN** an email containing the visitor's name, email address, and message is sent to the site owner's inbox
 
-### Requirement: Submission outcome is reported to the visitor
+### Requirement: Submission feedback
+Submission outcome MUST be reported to the visitor
 Feature: contact-form
 
 #### Scenario: Delivery succeeds

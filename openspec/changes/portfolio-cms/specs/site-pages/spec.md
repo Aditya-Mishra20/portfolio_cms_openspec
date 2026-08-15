@@ -1,6 +1,7 @@
 ## ADDED Requirements
 
-### Requirement: Site-wide navigation and footer from site settings
+### Requirement: Shared navigation and footer
+Site-wide navigation and footer MUST come from site settings
 Feature: site-pages
 Rule: Every page shares navigation and footer sourced from the CMS site settings
 
@@ -10,7 +11,8 @@ Rule: Every page shares navigation and footer sourced from the CMS site settings
 - **THEN** the page shows the configured navigation links
 - **AND** the page shows the configured footer content
 
-### Requirement: Home page shows hero and featured projects from CMS content
+### Requirement: Home page
+The home page MUST show hero and featured projects from CMS content
 Feature: site-pages
 
 #### Scenario: Visitor opens the home page
@@ -20,7 +22,8 @@ Feature: site-pages
 - **THEN** the hero heading and introduction are displayed
 - **AND** the featured projects are listed
 
-### Requirement: About page shows biography and skills from CMS content
+### Requirement: About page
+The about page MUST show biography and skills from CMS content
 Feature: site-pages
 
 #### Scenario: Visitor opens the about page
@@ -29,7 +32,8 @@ Feature: site-pages
 - **THEN** the biography is displayed
 - **AND** the list of skills is displayed
 
-### Requirement: Work page lists all published projects
+### Requirement: Work page
+The work page MUST list all published projects
 Feature: site-pages
 
 #### Scenario: Visitor opens the work page
@@ -37,7 +41,8 @@ Feature: site-pages
 - **WHEN** a visitor opens the work page
 - **THEN** all published projects are displayed
 
-### Requirement: Services page lists all published services
+### Requirement: Services page
+The services page MUST list all published services
 Feature: site-pages
 
 #### Scenario: Visitor opens the services page
@@ -45,7 +50,8 @@ Feature: site-pages
 - **WHEN** a visitor opens the services page
 - **THEN** all published services are displayed
 
-### Requirement: Contact page shows contact information from CMS content
+### Requirement: Contact page
+The contact page MUST show contact information from CMS content
 Feature: site-pages
 
 #### Scenario: Visitor opens the contact page
@@ -53,7 +59,8 @@ Feature: site-pages
 - **WHEN** a visitor opens the contact page
 - **THEN** the email address and contact details are displayed
 
-### Requirement: Light and dark theme support
+### Requirement: Theme support
+Light and dark theme support MUST be provided
 Feature: site-pages
 Rule: The site renders in the visitor's preferred theme and can be toggled
 
